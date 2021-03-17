@@ -23,5 +23,19 @@ onDelete = (val)=>{
 	}
 	this.setState({folders:folders,selected:folders[0]})
 }
-onCreate = () =>{
+onCreate = (val) =>{
 	let folders = this.state.folders
+	folders.push(val)
+	this.setState({folders:folders,selected:folders[folders.length - 1]})
+}
+  render() {
+    return (
+      <div className="folderBlock">
+           <TreeView setSelected={this.setSelected} folders={this.state.folders} selected={this.state.selected} /> 
+         <View selected={this.state.selected} onDelete={this.onDelete} onCreate={this.onCreate}/>
+        </div>
+    );
+  }
+}
+
+export default FolderBlock;

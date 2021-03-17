@@ -1,0 +1,13 @@
+img{
+	height:100px;
+
+}
+.folderName{
+	margin: auto;
+    padding: unset;
+}
+.folderDiv{
+	height: 200px;
+    width: 200px;
+    text-align: center;
+}

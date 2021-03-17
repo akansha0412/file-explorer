@@ -10,7 +10,7 @@ class TreeView extends Component {
     };
 }
     onClick = (e)=>{
-    	e.target.classList.add('selected');
+    	
     	this.props.setSelected(e.target.getAttribute('value'))
     }
 
@@ -25,6 +25,14 @@ class TreeView extends Component {
       
        </div>
        <div className="fav">Icloud
-      <span onClick ={this.onClick} value='icloud Drive'> icloud Drive</span>
-      <span onClick ={this.onClick} value='Documents'> Documents </span>
-       <span onClick ={this.onClick} v
+      <span className={this.props.selected === 'icloud Drive' ? 'selected':null} onClick ={this.onClick} value='icloud Drive'> icloud Drive</span>
+      <span className={this.props.selected === 'Documents' ? 'selected':null} onClick ={this.onClick} value='Documents'> Documents </span>
+       <span className={this.props.selected === 'Desktop' ? 'selected':null} onClick ={this.onClick} value ='Desktop'> Desktop </span>
+
+       </div>
+        </div>
+    );
+  }
+}
+
+export default TreeView;

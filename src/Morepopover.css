@@ -14,3 +14,22 @@
 	    padding: unset;
     margin: 6px 0;
 }
+.createModal{
+	height: 100px;
+    width: 80%;
+    background: #3a3a3a;
+    text-align: center;
+    margin: auto;
+}
+input{
+	margin:40px;
+	height:20px;
+	background: #dde4e4;
+}
+button{
+	height:30px;
+	background: yellow;
+	border:1px solid yellow;
+	border-radius: 10px
+
+}
